@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <algorithm>
 #include "composite.h"
 
 void Composite::operation()
@@ -16,7 +17,7 @@ void Composite::add(Component * component)
 
 void Composite::remove(Component * component)
 {
-	
+	children_.erase(std::remove(children_.begin(), children_.end(), component), children_.end());
 }
 
 Component * Composite::getChild(int child)
