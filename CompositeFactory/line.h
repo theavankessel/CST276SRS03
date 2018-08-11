@@ -6,8 +6,8 @@ class Line : public Graphic
 {
 public:
 	void draw() override;
-	void save() override;
-	void load() override;
+	void save(std::ostream & stream) const override;
+	void load(std::istream & stream) override;
 
 private:
 	Point point1_;

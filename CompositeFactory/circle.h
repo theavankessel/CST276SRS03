@@ -7,8 +7,8 @@ class Circle : public Graphic
 public:
 	Circle(Point center, double radius);
 	void draw() override;
-	void save() override;
-	void load() override;
+	void save(std::ostream & stream) const override;
+	void load(std::istream & stream) override;
 
 private:
 	Point center_;

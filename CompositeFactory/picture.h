@@ -6,8 +6,8 @@ class Picture : public Graphic
 {
 public:
 	void draw() override;
-	void save() override;
-	void load() override;
+	void save(std::ostream & stream) const override;
+	void load(std::istream & stream) override;
 	void add(Graphic * graphic);
 	void remove(Graphic * graphic);
 	Graphic* getGraphic(int index);
