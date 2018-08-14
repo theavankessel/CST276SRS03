@@ -28,7 +28,7 @@ void Point::setY(int y)
 
 void to_json(nlohmann::json & j, Point const & point)
 {
-	j = nlohmann::json{ { "x", point.x_ },{ "y", point.y_ } };
+	j["Point"] = { { "x", point.x_ },{ "y", point.y_ } };
 }
 
 void from_json(nlohmann::json const & j, Point & point)

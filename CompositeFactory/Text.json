@@ -1,0 +1,59 @@
+[
+	{
+		"Picture": [
+			{
+				"Id": 42,
+				"Circle": {
+					"center": {
+						"Point": {
+							"x": 1,
+							"y": 2
+						}
+					},
+					"radius": 12.0
+				}
+			},
+			{
+				"Polygon": {
+					"angle": 90,
+					"length": 4.0,
+					"numOfSides": 4,
+					"pointOne": {
+						"Point": {
+							"x": 0,
+							"y": 0
+						}
+					}
+				}
+			},
+			{
+				"Rectangle": {
+					"height": 12.0,
+					"upperLeftPoint": {
+						"Point": {
+							"x": 5,
+							"y": 7
+						}
+					},
+					"width": 3.0
+				}
+			},
+			{
+				"Line": {
+					"point1": {
+						"Point": {
+							"x": 1,
+							"y": 2
+						}
+					},
+					"point2": {
+						"Point": {
+							"x": 3,
+							"y": 4
+						}
+					}
+				}
+			}
+		]
+	}
+]

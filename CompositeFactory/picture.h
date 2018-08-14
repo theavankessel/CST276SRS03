@@ -1,17 +1,26 @@
 #pragma once
 #include <vector>
 #include "graphic.h"
+#include "nlohmann/json.hpp"
 
 class Picture : public Graphic
 {
+	friend void to_json(nlohmann::json& j, Picture const& picture);
+	friend void from_json(const nlohmann::json& j, Picture& picture);
+
 public:
+	Picture() = default;
+	Picture(std::vector<Graphic const*> graphics);
 	void draw() override;
-	void save(std::ostream & stream) const override;
-	void load(std::istream & stream) override;
+	void save(nlohmann::json &j) const override;
+	void load(const nlohmann::json &j) override;
 	void add(Graphic * graphic);
 	void remove(Graphic * graphic);
-	Graphic* getGraphic(int index);
+	void to_json(nlohmann::json & j) const override;
+	void from_json(const nlohmann::json & j) override;
+	const Graphic* getGraphic(int index);
 
 private:
-	std::vector<Graphic*> graphics_;
+	int id_ = 5;
+	std::vector<Graphic const*> graphics_;
 };

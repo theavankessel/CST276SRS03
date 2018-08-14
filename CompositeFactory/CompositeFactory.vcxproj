@@ -158,23 +158,28 @@
     <ClInclude Include="point.h" />
     <ClInclude Include="polygon.h" />
     <ClInclude Include="rectangle.h" />
+    <ClInclude Include="graphicCreator.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="circle.cpp" />
-    <ClCompile Include="CompositeFactory.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="line.cpp" />
     <ClCompile Include="picture.cpp" />
     <ClCompile Include="point.cpp" />
     <ClCompile Include="polygon.cpp" />
     <ClCompile Include="rectangle.cpp" />
+    <ClCompile Include="graphicCreator.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

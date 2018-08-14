@@ -42,12 +42,12 @@
     <ClInclude Include="point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="graphicCreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CompositeFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="circle.cpp">
@@ -68,5 +68,14 @@
     <ClCompile Include="point.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="graphicCreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.json" />
   </ItemGroup>
 </Project>

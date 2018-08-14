@@ -6,14 +6,16 @@
 class Rectangle : public Graphic
 {
 	friend void to_json(nlohmann::json& j, Rectangle const& rectangle);
-	friend void from_json(nlohmann::json const& j, Rectangle& rectangle);
+	friend void from_json(const nlohmann::json& j, Rectangle& rectangle);
 
 public:
 	Rectangle() = default;
 	Rectangle(Point upperLeftPoint, double height, double width);
 	void draw() override;
-	void save(std::ostream & stream) const override;
-	void load(std::istream & stream) override;
+	void save(nlohmann::json &j) const override;
+	void load(const nlohmann::json &j) override;
+	virtual void to_json(nlohmann::json & j) const override;
+	void from_json(const nlohmann::json & j) override;
 
 	double getHeight();
 	double getWidth();
@@ -21,7 +23,7 @@ public:
 	void setWidth(double width);
 
 private:
-	int Id = 1;
+	int id_ = 1;
 	Point upperLeftPoint_;
 	double height_ = 0;
 	double width_ = 0;	
